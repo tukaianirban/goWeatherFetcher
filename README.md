@@ -13,8 +13,5 @@ The fetcher service uses a pool of routines to fetch weather data from the OpenW
 
 The code here demonstrates the different techniques that can be used when designing and inter-connecting services / micro-services written in Golang. RabbitMQ and Kafka are popular messaging buses, and there is an increased trend to containerize them. Hence, the motivation to keep RMQ in a docker container here. The techniques here can be expanded/extended to adapt to scaling systems with services being geographically and platform-wise separated.
 
-The project does not aim to be an efficient piece of code, but merely demonstrates different ways of communicating between pools, routines, etc. FYI, the code is ridden with problems like memory leaks, latency, etc and it is meant to be that way, for now.
-The code will compile however, and one can uncomment the 'Print' statements to get 'logs'.
-
 To make queries to the web api, I used cURL. A sample call when done from the same host machine is:
 $ curl -v --noproxy "*" "http://localhost:8881/?location=Berlin,DE"

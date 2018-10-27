@@ -104,6 +104,7 @@ func dispenser(rmqchannel *amqp.Channel, rmqrecvchannel <-chan amqp.Delivery, di
                                         break
                                 }
                                 apichanmap[rpkt.MessageId]<- rpkt.Data
+								delete(apichanmap, rpkt.MessageId)
 //                              fmt.Println("Sent response packet back to originator messageid=", rpkt.MessageId)
                 }
         }
